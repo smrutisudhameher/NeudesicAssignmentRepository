@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Neudesic.Views.MainPage"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+
+    <NavigationPage.TitleView>
+        <Label Text="Countries" HorizontalOptions="{OnPlatform Android=StartAndExpand, iOS=CenterAndExpand}" VerticalOptions="Center"
+               VerticalTextAlignment="Center" TextColor="{OnPlatform Android=White, iOS=Black}" 
+               FontSize="Large" FontAttributes="Bold"/>
+    </NavigationPage.TitleView>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <ActivityIndicator Grid.Row="0" 
+                           IsVisible="{Binding IsMainPageLoading}" IsRunning="{Binding IsMainPageLoading}"
+                           VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+        
+        <ListView Grid.Row="0" x:Name="countriesListView"
+                  ItemsSource="{Binding CountriesList}" ItemTapped="ListView_ItemTapped" HasUnevenRows="True">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid ColumnSpacing="10" RowSpacing="0" Padding="10">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <ffimageloadingsvg:SvgCachedImage Grid.Row="0" Grid.RowSpan="2" Grid.Column="0" 
+                                                          Source="{Binding flag}" HorizontalOptions="Fill" VerticalOptions="Fill"/>
+
+                            <Label Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" 
+                               Text="{Binding name}" TextColor="Black" FontAttributes="Bold" FontSize="Body" 
+                               VerticalOptions="Center" VerticalTextAlignment="Center"/>
+
+                            <Label Grid.Row="1" Grid.Column="1" 
+                               Text="{Binding capital}" TextColor="DarkSlateGray" FontSize="Subtitle"
+                               VerticalOptions="Center" VerticalTextAlignment="Center"/>
+
+                            <Label Grid.Row="1" Grid.Column="2"
+                               Text="{Binding currenciesStr}" TextColor="Gray" FontSize="Subtitle"
+                               VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Label Grid.Row="0" x:Name="errorLbl"
+               Text="Sorry, we were unable to retrieve the data now, please try again later" FontAttributes="Bold"
+               HorizontalOptions="Center" VerticalOptions="Center" HorizontalTextAlignment="Center" VerticalTextAlignment="Center"
+               FontSize="Body" IsVisible="false"/>
+    </Grid>
+</ContentPage>

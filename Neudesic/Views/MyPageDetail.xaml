@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Neudesic.Views.MyPageDetail"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             ios:Page.UseSafeArea="true"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+
+    <NavigationPage.TitleView>
+        <Label Text="{Binding CountryDetailObject.name}" MaxLines="1" LineBreakMode="TailTruncation" 
+               HorizontalOptions="{OnPlatform Android=StartAndExpand, iOS=CenterAndExpand}" VerticalOptions="Center"
+               VerticalTextAlignment="Center" TextColor="{OnPlatform Android=White, iOS=Black}" 
+               FontSize="Large" FontAttributes="Bold"/>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.Content>
+        <ScrollView x:Name="DetailPageScrollView">
+
+            <Grid Margin="10" x:Name="detailDataGrid" BackgroundColor="White">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="240"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="25"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="25"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <ffimageloadingsvg:SvgCachedImage Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" 
+                                                      Source="{Binding CountryDetailObject.flag}" />
+
+                <Label Grid.Row="1" Grid.Column="0"
+                   Text="{Binding CountryDetailObject.capital, StringFormat='Capital: {0:F2}'}" FontAttributes="Bold" FontSize="Body" TextColor="Black"/>
+                <Label Grid.Row="1" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.currenciesStr, StringFormat='Currencies: {0:F2}'}" FontAttributes="Bold" FontSize="Body" TextColor="Black"/>
+
+                <Label Grid.Row="2" Grid.Column="0"
+                   Text="topLevelDomain" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="2" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.topLevelDomainStr}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="3" Grid.Column="0"
+                   Text="callingCodes" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="3" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.callingCodesStr}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="4" Grid.Column="0"
+                   Text="altSpellings" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="4" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.altSpellingsStr}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="5" Grid.Column="0"
+                   Text="region" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="5" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.region}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="6" Grid.Column="0"
+                   Text="subregion" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="6" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.subregion}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="7" Grid.Column="0"
+                   Text="population" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="7" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.population}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="8" Grid.Column="0"
+                   Text="latlng" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="8" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.latlngStr}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="9" Grid.Column="0"
+                   Text="demonym" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="9" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.demonym}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="10" Grid.Column="0"
+                   Text="area" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="10" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.area}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="12" Grid.Column="0"
+                   Text="timezones" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="12" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.timezonesStr}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="13" Grid.Column="0"
+                   Text="borders" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="13" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.bordersStr}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="14" Grid.Column="0"
+                   Text="nativeName" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="14" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.nativeName}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="15" Grid.Column="0"
+                   Text="numericCode" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="15" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.numericCode}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="16" Grid.Column="0"
+                   Text="languages" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="16" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.languagesStr}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="18" Grid.Column="0"
+                   Text="regionalBlocs" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="18" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.regionalBlocsStr}" FontAttributes="Bold" FontSize="Body"/>
+
+                <Label Grid.Row="19" Grid.Column="0"
+                   Text="cioc" FontAttributes="Bold" FontSize="Body"/>
+                <Label Grid.Row="19" Grid.Column="1"
+                   Text="{Binding CountryDetailObject.cioc}" FontAttributes="Bold" FontSize="Body"/>
+
+            </Grid>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

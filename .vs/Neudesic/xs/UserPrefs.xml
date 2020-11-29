@@ -1,0 +1,46 @@
+﻿<Properties StartupConfiguration="{94911664-BD6D-4681-BDB9-8BCDD6A26D17}|Default">
+  <MonoDevelop.Ide.ItemProperties.Neudesic.Android FirstBuild="True" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.ItemProperties.Neudesic.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneDeviceTarget.00008030-001D59EA1132802E" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Neudesic/RestServices.cs">
+    <Files>
+      <File FileName="Neudesic/RestServices.cs" Line="69" Column="1" />
+      <File FileName="Neudesic/PagesViewModel.cs" Line="48" Column="1" />
+      <File FileName="Neudesic/CountryModel.cs" Line="53" Column="30" />
+      <File FileName="Neudesic/MainPage.xaml.cs" Line="31" Column="1" />
+      <File FileName="Neudesic/MainPage.xaml" Line="1" Column="1" />
+      <File FileName="Neudesic/MyPageDetail.xaml.cs" Line="15" Column="1" />
+      <File FileName="Neudesic/MyPageDetail.xaml" Line="20" Column="85" />
+      <File FileName="Neudesic/App.xaml.cs" Line="13" Column="65" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Neudesic" expanded="True">
+            <Node name="Neudesic" expanded="True">
+              <Node name="App.xaml" expanded="True" />
+              <Node name="MainPage.xaml" expanded="True" />
+              <Node name="MyPageDetail.xaml" expanded="True" />
+              <Node name="RestServices.cs" selected="True" />
+            </Node>
+            <Node name="Neudesic.iOS" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhone" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/apple/Desktop/Developments/Neudesic/Neudesic/MainPage.xaml.cs" relfile="Neudesic/MainPage.xaml.cs" line="37" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Developments/Neudesic/Neudesic/MainPage.xaml.cs" relfile="Neudesic/MainPage.xaml.cs" line="31" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Developments/Neudesic/Neudesic/RestServices.cs" relfile="Neudesic/RestServices.cs" line="40" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Developments/Neudesic/Neudesic/RestServices.cs" relfile="Neudesic/RestServices.cs" line="48" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Developments/Neudesic/Neudesic/RestServices.cs" relfile="Neudesic/RestServices.cs" line="61" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Developments/Neudesic/Neudesic/RestServices.cs" relfile="Neudesic/RestServices.cs" line="69" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Developments/Neudesic/Neudesic/RestServices.cs" relfile="Neudesic/RestServices.cs" line="45" column="1" />
+      <Breakpoint file="/Users/apple/Desktop/Developments/Neudesic/Neudesic/RestServices.cs" relfile="Neudesic/RestServices.cs" line="37" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
